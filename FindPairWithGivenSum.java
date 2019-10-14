@@ -3,7 +3,7 @@
 import java.util.HashMap; 
 import java.util.Map; 
 
-public class FindPair
+public class FindPairWithGivenSum
 {
   
   public static void main(String[] args)
