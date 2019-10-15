@@ -13,22 +13,37 @@ public class Traversal {
         root.left = child1;
         root.right = child2;
 
+        System.out.println("Pre Order Traversal:");
+        preOrderTraversal(root);
+
+        System.out.println("\nIn Order Traversal:");
         inOrderTraversal(root);
+
+        System.out.println("\nPost Order Traversal: ");
+        postOrderTraversal(root);
+    }
+
+    private static void preOrderTraversal(Node root){
+        if(root != null){
+            System.out.print(root.data + " ");
+            inOrderTraversal(root.left);
+            inOrderTraversal(root.right);
+        }
     }
 
     private static void inOrderTraversal(Node root){
         if(root != null){
             inOrderTraversal(root.left);
-            System.out.println(root.data);
+            System.out.print(root.data + " ");
             inOrderTraversal(root.right);
         }
     }
 
-    private static void preOrderTraversal(Node root){
+    private static void postOrderTraversal(Node root){
         if(root != null){
             inOrderTraversal(root.left);
-            System.out.println(root.data);
             inOrderTraversal(root.right);
+            System.out.print(root.data + " ");
         }
     }
 

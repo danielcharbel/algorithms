@@ -1,3 +1,5 @@
+package array;
+
 //Question: Given an unsorted array of integers, find a pair with given sum in it.
 
 import java.util.HashMap; 
